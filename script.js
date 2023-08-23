@@ -57,10 +57,21 @@ status1.style.color = STATUS_MAP.overdue.color
 status2.style.color = STATUS_MAP.reserved.color
 status3.style.color = STATUS_MAP.shelf.color
 
-//stuck here
-STATUS_MAP.overdue.canReserve.enabled = false
-STATUS_MAP.overdue.canCheckout.enabled = false
-STATUS_MAP.overdue.canCheckIn.enabled = false
+
+checkout1.disabled = STATUS_MAP.overdue.canCheckout ? false : true
+checkin1.enabled = STATUS_MAP.overdue.canCheckin ? false : true
+reserve1.disabled = STATUS_MAP.overdue.canReserve ? false : true
+
+
+reserve2.disabled = STATUS_MAP.reserved.canReserve ? false : true
+checkout2.enabled = STATUS_MAP.reserved.canCheckout ? false : true
+checkin2.disabled = STATUS_MAP.reserved.canCheckIn ? false : true
+
+reserve3.disabled = STATUS_MAP.shelf.canReserve ? false : true
+checkout3.enabled = STATUS_MAP.shelf.canCheckout ? false : true
+checkin3.disabled = STATUS_MAP.shelf.canCheckIn ? false : true
+
+
 
 
 
